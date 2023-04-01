@@ -19,9 +19,14 @@ namespace PrevisaoTempo
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        string OpenWeatherKey = "d3a690b128e500aa56dded73551bda8c";
 
+        void GetPrevisao()
+        {
+            using (WebClient web = new WebClient())
+            {
+                string url = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&lang=pt");
+            }
         }
     }
 }
