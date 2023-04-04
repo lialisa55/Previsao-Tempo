@@ -12,6 +12,11 @@
         },
         "runtime": {
           "PrevisaoTempo.dll": {}
+        },
+        "resources": {
+          "pt-BR/PrevisaoTempo.resources.dll": {
+            "locale": "pt-BR"
+          }
         }
       },
       "Newtonsoft.Json/13.0.3": {

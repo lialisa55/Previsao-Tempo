@@ -16,18 +16,17 @@ namespace PrevisaoTempo
 
         public class tempo
         {
-            string main { get; set; }
-            string descricao { get; set; }
-            string icone { get; set; }
+            public string main { get; set; }
+            public string descricao { get; set; }
+            public string icone { get; set; }
         }
 
         public class main
         {
-            double temperatura { get; set; }
-            double sensaTermica { get; set; }
-            double tempMin { get; set; }
-            double tempMax { get; set; }
-            double humidade { get; set; }
+            public double temperatura { get; set; }
+            public double sensaTermica { get; set; }
+            public double tempMin { get; set; }
+            public double tempMax { get; set; }
 
         }
         
