@@ -29,13 +29,13 @@ namespace PrevisaoTempo
                 var json = web.DownloadString(url);
                 InfoTempo.root Info = JsonConvert.DeserializeObject<InfoTempo.root>(json);
 
-                pbTempoIcone.ImageLocation = "https://openweathermap.org/img/w" + Info.tempo[0].icone + ".png";
-                lbCondicao.Text = Info.tempo[0].main;
-                lbDescricao.Text = Info.tempo[0].descricao;
-                lbSensacaoTermica.Text = Info.main.sensaTermica.ToString();
-                lbTemperatura.Text = Info.main.temperatura.ToString();
-                lbTemperaturaMax.Text = Info.main.tempMax.ToString();
-                lbTemperaturaMin.Text = Info.main.tempMin.ToString();
+                pbTempoIcone.ImageLocation = "https://openweathermap.org/img/w" + Info.weather[0].icon + ".png";
+                lbCondicao.Text = Info.weather[0].main;
+                lbDescricao.Text = Info.weather[0].description;
+                lbSensacaoTermica.Text = Info.main.feels_like.ToString();
+                lbTemperatura.Text = Info.main.temp.ToString();
+                lbTemperaturaMax.Text = Info.main.temp_max.ToString();
+                lbTemperaturaMin.Text = Info.main.temp_min.ToString();
             }
         }
 
