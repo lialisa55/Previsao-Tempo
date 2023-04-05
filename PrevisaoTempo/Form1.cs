@@ -19,6 +19,11 @@ namespace PrevisaoTempo
             InitializeComponent();
         }
 
+        public double ToCelsius(double kelvin)
+        {
+            return Convert.ToInt32(kelvin - 273.15);
+        }
+
         string OpenWeatherKey = "d3a690b128e500aa56dded73551bda8c";
 
         void GetPrevisao()
@@ -29,13 +34,13 @@ namespace PrevisaoTempo
                 var json = web.DownloadString(url);
                 InfoTempo.root Info = JsonConvert.DeserializeObject<InfoTempo.root>(json);
 
-                pbTempoIcone.ImageLocation = "https://openweathermap.org/img/w" + Info.weather[0].icon + ".png";
-                lbCondicao.Text = Info.weather[0].main;
+                pbTempoIcone.ImageLocation = "https://openweathermap.org/img/wn/" + Info.weather[0].icon + "@2x.png";
                 lbDescricao.Text = Info.weather[0].description;
-                lbSensacaoTermica.Text = Info.main.feels_like.ToString();
-                lbTemperatura.Text = Info.main.temp.ToString();
-                lbTemperaturaMax.Text = Info.main.temp_max.ToString();
-                lbTemperaturaMin.Text = Info.main.temp_min.ToString();
+                lbSensacaoTermica.Text = ToCelsius(Info.main.feels_like).ToString() + '°';
+                lbTemperatura.Text = ToCelsius(Info.main.temp).ToString() + '°';
+                lbTemperaturaMinMax.Text = ToCelsius(Info.main.temp_min).ToString() + '°' + '/' + ToCelsius(Info.main.temp_max).ToString() + '°';
+                label2.Visible = true;
+                lbDescricao.Visible = true;
             }
         }
 
@@ -49,6 +54,21 @@ namespace PrevisaoTempo
             {
                 MessageBox.Show("Cidade inválida");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            statusStrip1.Text = DateTime.Today.ToLongDateString();
         }
     }
 }

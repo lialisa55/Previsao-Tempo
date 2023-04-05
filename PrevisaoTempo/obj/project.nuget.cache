@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "D6AXI19QUdg3pH4GR4mv6vudz4+8dQDKpj6MRn2qYmEZgOcHheHc8RqvVeBSCsixXMyss8X9DZumb2OnKOLL0g==",
+  "dgSpecHash": "ttkhbZWvtp3jCIS8RsSCHkpk08+u6jy81MAvi6jM8hi0CNEXqvtbZSNTh2NmIKOWSXg0AbgyB5rUhSGwA5Sjbg==",
   "success": true,
-  "projectFilePath": "G:\\MODULO2\\PrevisaoTempo\\PrevisaoTempo\\PrevisaoTempo.csproj",
+  "projectFilePath": "C:\\Users\\Manager\\Source\\Repos\\Previsao-Tempo\\PrevisaoTempo\\PrevisaoTempo.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Monalisa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Manager\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
